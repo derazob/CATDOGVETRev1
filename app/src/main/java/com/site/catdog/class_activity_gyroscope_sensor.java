@@ -35,10 +35,10 @@ public class class_activity_gyroscope_sensor extends AppCompatActivity {
             public void onSensorChanged(SensorEvent sensorEvent) {
                 if(sensorEvent.values[2] > 0.5f) { // anticlockwise
 
-                    getWindow().getDecorView().setBackgroundColor(Color.BLUE);
+                    getWindow().getDecorView().setBackgroundColor(Color.GREEN);
                 } else if(sensorEvent.values[2] < -0.5f) { // clockwise
 
-                    getWindow().getDecorView().setBackgroundColor(Color.YELLOW);
+                    getWindow().getDecorView().setBackgroundColor(Color.RED);
                 }
             }
             @Override
