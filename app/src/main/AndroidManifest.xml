@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.site.catdog">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CRUD_SQLite"
+        tools:targetApi="31">
+
+        <activity
+            android:name="com.site.catdog.class_activity_gyroscope_sensor"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.site.catdog.activity_splash"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <!--
+             TODO: Before you run your application, you need a Google Maps API key.
+
+             To get one, follow the directions here:
+
+                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+             Once you have your API key (it starts with "AIza"), define a new property in your
+             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC20yKvCRdgyeEVTdOy-30d_vIihpE9L-E" />
+
+        <activity
+            android:name="com.site.catdog.class_activity_maps"
+            android:exported="false"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name="com.site.catdog.class_activity_adopta"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.site.catdog.activity_process"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.site.catdog.class_add_show_person"
+            android:exported="false"
+            android:label="Ejemplo SQLite" />
+        <activity
+            android:name="com.site.catdog.activity_read_person"
+            android:label="Leer SQLite" />
+        <activity
+            android:name="com.site.catdog.class_activity_edit_person"
+            android:label="Actualizar SQLite" />
+    </application>
+
+</manifest>
