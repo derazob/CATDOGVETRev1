@@ -17,6 +17,16 @@ public class class_activity_adopta extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adopta);
 
+        Enviar=(Button)findViewById(R.id.button4);
+        Enviar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent( class_activity_adopta.this, activity_process.class);
+                startActivity(i);
+            }
+        });
+
+
         etEnviar=findViewById(R.id.editTextTextPersonName);
         Enviar=findViewById(R.id.button2);
 
@@ -29,11 +39,7 @@ public class class_activity_adopta extends AppCompatActivity {
                 Intent i=new Intent( class_activity_adopta.this, class_add_show_person.class);
                 i.putExtras(enviadatos);
                 startActivity(i);
-            }
 
-            public void ACCESO (View view){
-                Intent acceso = new Intent(class_activity_adopta.this, activity_process.class);
-                startActivity(acceso);
             }
         });
 
